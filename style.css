@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
     max-width: 100%;
     text-align: left;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 2%;
 }
 
 .mainContainer {
