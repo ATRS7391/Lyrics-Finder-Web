@@ -24,12 +24,12 @@ body::-webkit-scrollbar {
     max-width: 100%;
     text-align: left;
     align-items: center;
-    padding-left: 2%;
 }
 
 .mainContainer {
     display: flex;
     flex-direction: column;
+    padding-left: 2%;
 }
 
 #title {
