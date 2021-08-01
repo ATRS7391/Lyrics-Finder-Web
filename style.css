@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 .mainContainer {
     display: flex;
     flex-direction: column;
-    padding-left: 2%;
+    padding-left: 2px;
 }
 
 #title {
