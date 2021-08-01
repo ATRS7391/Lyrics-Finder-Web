@@ -4,102 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" type="text/javascript">
-    function processQuery(query) {
-    urlQuery = encodeURIComponent(String(query).replace(/[^a-zA-Z ]/g, " ").replace(/  +/g, ' '));
-    return String(urlQuery);
-}
-
-window.onload=function(){
-var elem = document.getElementById("query");
-elem.addEventListener("keydown", function (e) {
-    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-        getq();
-    }
-});}
-
-function getQuery() {
-    return (String(document.getElementById("query").value));
-}
-
-function getLyrics(query){
-    url = "https://webapis.badasslover.repl.co/API/searchLyrics/freeLyrics/" + processQuery(query);
-    fetch(url).then((response)=>{
-        return response.json();
-    }).then((data)=>{
-        if (data.status == "success"){
-            document.getElementById('mainBody').innerHTML = `
-            <div class="mainContainer">
-            <div id="title"></div>
-            <div id="artist"></div>
-            <div id="lyrics"></div>
-            <div id="source"></div>
-            `
-            document.getElementById('title').innerHTML = (data.title).replaceAll("\n", "<br>");
-            document.getElementById('artist').innerHTML = (data.mainArtist).replaceAll("\n", "<br>");
-            document.getElementById('lyrics').innerHTML = (data.lyrics).replaceAll("\n", "<br>");
-            document.getElementById('source').innerHTML = 'Lyrics provided by ' + (data.source).replaceAll("\n", "<br>");
-        }
-        else {
-            document.getElementById('mainBody').innerHTML = `
-            <div class="mainContainer">
-            <div id="title"></div>
-            <div id="artist"></div>
-            <div id="lyrics"></div>
-            <div id="source"></div>
-            `
-            document.getElementById('title').innerHTML = 'Sadly, no lyrics found. ';
-            document.getElementById('artist').innerHTML = 'Make sure it has lyrics or try to be more specific. ';
-        }
-        
-    }).catch((error) => {
-        document.getElementById('mainBody').innerHTML = `
-        <div class="mainContainer">
-        <div id="title"></div>
-        <div id="artist"></div>
-        <div id="lyrics"></div>
-        <div id="source"></div>
-        `
-        document.getElementById('title').innerHTML = 'Oh no, something went wrong. Please try later. ';
-        document.getElementById('artist').innerHTML = 'Try checking internet, or it might be internal system error. Sorry!';
-      });
-}
-
-function getq() {
-    var q = getQuery();
-    if (q.replace(/\s/g, '').length == 0) {
-        document.getElementById('mainBody').innerHTML = `
-        <div class="mainContainer">
-        <div id="title"></div>
-        <div id="artist"></div>
-        <div id="lyrics"></div>
-        <div id="source"></div>
-        `
-        document.getElementById('title').innerHTML = 'Search for something... ';
-        document.getElementById('artist').innerHTML = 'Your query is empty... ';
-      return;
-    }
-    document.getElementById('mainBody').innerHTML = `
-            <div class="loadersss">
-            <div class="loader"></div>
-            </div>
-            `
-    getLyrics(q);
-}
-    </script>
+    <script src="script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style.css">
     <title>Lyrics Finder</title>
 </head>
 <body>
     <div class="container">
-        <div class="wrap">
-            <div class="search">
-            <input type="text" class="searchTerm" placeholder="Search by title, artist or lyrics" id="query">
-            <button type="submit" class="searchButton" onclick="getq();">Search
-            </button>
+        <div class="searchbar">
+            <div class="wrap">
+                <div class="search">
+                <input type="text" class="searchTerm" placeholder="Search by title, artist or lyrics" id="query">
+                <button type="submit" class="searchButton" onclick="getq();"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px;"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></button>
+                </div>
             </div>
         </div>
-        <div class="mainContainer" id="mainBody">
+        <div class="mainContent" id="mainBody">
             <div class="mainContainer">
                 <div id="title">Get lyrics of your favorite songs...</div>
                 <div id="artist">Just a search far... </div>
