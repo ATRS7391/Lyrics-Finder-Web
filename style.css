@@ -20,52 +20,73 @@ body::-webkit-scrollbar {
 
 .container {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    max-width: 100%;
-    text-align: left;
-    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
 }
 
-.mainContainer {
+.mainContent {
     display: flex;
-    flex-direction: column;
-    padding-left: 2px;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    align-self: center;
+}
+
+.mainContainer{
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 546px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.searchbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.wrap {
+    width: 70vw;
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 
 #title {
     font-size: 40px;
     font-weight: 700;
-    padding-bottom: 0;
-    padding-top: 25%;
     color: black;
-    width: 40vw;
+    padding-top: 100px;
+    padding-bottom: 0px;
 }
 
 #artist {
     font-size: large;
-    padding-bottom: 15%;
     font-weight: 600;
     color: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 #lyrics {
     font-size: larger;
-    width: 40vw;
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 
-@media (max-width: 1200px) {
-    #lyrics {
-      width: 100%;
-    }
-    #title {
+#source {
+    color: thistle;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 770px) {
+    .mainContainer {
         width: 100%;
     }
-  }
-
-#source {
-    padding-top: 15%;
-    padding-bottom: 25%;
-    color: thistle;
 }
 
 
@@ -103,10 +124,6 @@ body::-webkit-scrollbar {
     padding-top: 20vh;
 }
 
-.wrap {
-    padding-top: 5vh;
-    width: 70vw;
-}
 
 .search {
     width: 100%;
@@ -129,27 +146,27 @@ body::-webkit-scrollbar {
     font-size: medium;
 }
   
-.searchTerm:hover{
-    color: #000000;
-    background-color: white;
-    transition: all 0.10s;
-}
-
-  
 .searchButton {
-    width: 78px;
+    width: 50px;
     height: 36px;
-    border: 1px solid white;
-    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
     text-align: center;
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.350);
 }
 
 .searchButton:hover {
-    border: 2px solid white;
-    transition: all 0.10s;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.350);
+    transition: all 0.20s;
 }
 
+button:focus {
+    outline: none;
+    box-shadow: none;
+  }
