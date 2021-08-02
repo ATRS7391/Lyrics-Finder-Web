@@ -53,6 +53,7 @@ body::-webkit-scrollbar {
     width: 70vw;
     padding-top: 50px;
     padding-bottom: 0px;
+    height: 36px;
 }
 
 #title {
@@ -136,8 +137,8 @@ body::-webkit-scrollbar {
     width: 100%;
     border: 3px solid #ffffff;
     border-right: none;
-    padding: 5px;
-    height: 20px;
+    padding: 0px;
+    height: auto;
     border-radius: 3px 0 0 3px;
     outline: none;
     color: #000000;
@@ -149,13 +150,15 @@ body::-webkit-scrollbar {
   
 .searchButton {
     width: 50px;
-    height: 36px;
+    height: 100%;
     text-align: center;
     color: white;
     border-radius: 0 25px 25px 0;
     cursor: pointer;
     font-size: 20px;
     background: rgb(255, 255, 255);
+    padding: 0;
+    bottom: 0;
 }
 
 svg {
