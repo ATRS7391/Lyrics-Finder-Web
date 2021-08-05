@@ -1,0 +1,173 @@
+body, html{
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+  
+::selection {
+    background: rgba(141, 7, 250, 0.281);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.mainContent {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    align-self: center;
+}
+
+.mainContainer{
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 546px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.searchbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.wrap {
+    width: 70vw;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    height: 36px;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+#artist {
+    font-size: large;
+    font-weight: 500;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#lyrics {
+    font-size: larger;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background: linear-gradient(94.23deg,#5374fa 12.41%,#fd9179 52.55%,#ff6969 89.95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#source {
+    color: thistle;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 770px) {
+    .mainContainer {
+        width: 100%;
+    }
+}
+
+
+.loader {
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    background-color: rgb(141, 7, 250);
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+  
+@-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+  
+@keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+}
+
+
+.loadersss {
+    padding-top: 20vh;
+}
+
+
+.search {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+  
+.searchTerm {
+    width: 100%;
+    border: 3px solid #ffffff;
+    border-right: none;
+    padding: 0px;
+    height: auto;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: medium;
+    background-color: white;
+}
+  
+.searchButton {
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    padding: 0;
+    bottom: 0;
+}
+
+svg {
+    padding-right: 2px;
+    padding-top: 3px;
+}
+
+div:focus {
+    outline: none;
+    box-shadow: none;
+}
