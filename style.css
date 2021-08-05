@@ -1,12 +1,12 @@
 body, html{
     color: white;
-    background-color: black;
+    background-image: linear-gradient(to bottom right, rgb(141, 7, 250), rgb(255, 0, 149));
     overflow-x: hidden;
     min-height: 100vh;
+    background-color: rgb(255, 0, 149);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    color: white;
 }
 
 body::-webkit-scrollbar {
@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
 
   
 ::selection {
-    background: rgba(141, 7, 250, 0.281);
+    background: rgba(0, 0, 0, 0.350);
 }
 
 .container {
@@ -59,6 +59,7 @@ body::-webkit-scrollbar {
 #title {
     font-size: 40px;
     font-weight: 500;
+    color: black;
     padding-top: 100px;
     padding-bottom: 0px;
 }
@@ -66,6 +67,7 @@ body::-webkit-scrollbar {
 #artist {
     font-size: large;
     font-weight: 500;
+    color: black;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -74,9 +76,6 @@ body::-webkit-scrollbar {
     font-size: larger;
     padding-top: 50px;
     padding-bottom: 0px;
-    background: linear-gradient(94.23deg,#5374fa 12.41%,#fd9179 52.55%,#ff6969 89.95%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 #source {
@@ -96,7 +95,7 @@ body::-webkit-scrollbar {
     width: 50px;
     height: 50px;
     margin: 100px auto;
-    background-color: rgb(141, 7, 250);
+    background-color: rgb(255, 255, 255);
     border-radius: 100%;  
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
     animation: sk-scaleout 1.0s infinite ease-in-out;
