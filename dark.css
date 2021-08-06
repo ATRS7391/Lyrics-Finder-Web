@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
     font-size: larger;
     padding-top: 50px;
     padding-bottom: 0px;
-    background: linear-gradient(94.23deg,#5374fa 12.41%,#fd9179 52.55%,#ff6969 89.95%);
+    background: linear-gradient(#5374fa, #ff009d, #ff6969);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
