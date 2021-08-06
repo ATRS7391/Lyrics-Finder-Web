@@ -74,7 +74,7 @@ body::-webkit-scrollbar {
     font-size: larger;
     padding-top: 50px;
     padding-bottom: 0px;
-    background: linear-gradient(#5374fa, #ff009d, #ff6969);
+    background: linear-gradient(to right bottom, #5374fa, #ff009d, #ff6969);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
     width: 50px;
     height: 50px;
     margin: 100px auto;
-    background-color: rgb(141, 7, 250);
+    background-color: white;
     border-radius: 100%;  
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
     animation: sk-scaleout 1.0s infinite ease-in-out;
