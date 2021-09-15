@@ -16,7 +16,7 @@ function getQuery() {
 }
 
 function getLyrics(query){
-    url = "https://webapis.badasslover.repl.co/API/searchLyrics/freeLyrics/" + processQuery(query);
+    url = "https://webAPIs.badasslover.repl.co/API/searchLyrics/freeLyrics/" + processQuery(query);
     fetch(url).then((response)=>{
         return response.json();
     }).then((data)=>{
