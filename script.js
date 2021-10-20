@@ -16,7 +16,7 @@ function getQuery() {
 }
 
 function getLyrics(query){
-    url = "https://LyApi.atrs7391.repl.co/API/searchLyrics/freeLyrics/" + processQuery(query);
+    url = "https://webAPIs.lostinmemoriesanddreams.repl.co/API/searchLyrics/freeLyrics/" + processQuery(query);
     fetch(url).then((response)=>{
         return response.json();
     }).then((data)=>{
