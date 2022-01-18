@@ -2,31 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="script.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="instantlyrics.png" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet">
+    <link href="instantlyrics.png" rel="icon" type="image/x-icon"/>
     <title>LY | Instant Lyrics Finder</title>
 </head>
 <body>
-    <div class="container">
-        <div class="searchbar">
-            <div class="wrap">
-                <div class="search">
-                <input autocomplete="off" spellcheck="false" type="text" class="searchTerm" placeholder="Search by title, artist or lyrics" id="query">
-                <div type="submit" class="searchButton" onclick="getq();"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px;"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
+<div class="container">
+    <div class="searchbar">
+        <div class="wrap">
+            <div class="search">
+                <label for="query"></label><input autocomplete="off" class="searchTerm" id="query" placeholder="Search by title, artist or lyrics"
+                                                  spellcheck="false" type="text">
+                <div class="searchButton" onclick="getQ();" type="submit">
+                    <svg focusable="false" style="width: 30px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </svg>
                 </div>
             </div>
         </div>
-        <div class="mainContent" id="mainBody">
-            <div class="mainContainer">
-                <div id="title">Get lyrics of your favorite songs...</div>
-                <div id="artist">Just a search far... </div>
-                <div id="lyrics"></div>
-                <div id="source"></div>
-            </div>
+    </div>
+    <div class="mainContent" id="mainBody">
+        <div class="mainContainer">
+            <div id="title">Get lyrics of your favorite songs...</div>
+            <div id="artist">Just a search far...</div>
+            <div id="lyrics"></div>
+            <div id="source"></div>
         </div>
     </div>
+</div>
 </body>
 </html>
