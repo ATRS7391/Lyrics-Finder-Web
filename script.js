@@ -12,7 +12,7 @@ function getQuery() {
 }
 
 function getLyrics(query) {
-    let url = "https://atrs7391.herokuapp.com/api/v2/lyrics?api_key=public&query=" + encodeURIComponent(query);
+    let url = "https://atrs7391.up.railway.app/api/v2/lyrics?api_key=public&query=" + encodeURIComponent(query);
     fetch(url).then((response) => {
         return response.json();
     }).then((data) => {
